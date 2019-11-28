@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/trippyTinctureProjectFive/static/css/main.b100e6da.chunk.css",
+    "main.js": "/trippyTinctureProjectFive/static/js/main.a3a279ed.chunk.js",
+    "main.js.map": "/trippyTinctureProjectFive/static/js/main.a3a279ed.chunk.js.map",
+    "runtime-main.js": "/trippyTinctureProjectFive/static/js/runtime-main.6ced5ce6.js",
+    "runtime-main.js.map": "/trippyTinctureProjectFive/static/js/runtime-main.6ced5ce6.js.map",
+    "static/js/2.ea6da0cd.chunk.js": "/trippyTinctureProjectFive/static/js/2.ea6da0cd.chunk.js",
+    "static/js/2.ea6da0cd.chunk.js.map": "/trippyTinctureProjectFive/static/js/2.ea6da0cd.chunk.js.map",
+    "index.html": "/trippyTinctureProjectFive/index.html",
+    "precache-manifest.c5a700449b4f7efcd74e8a8f85ca6701.js": "/trippyTinctureProjectFive/precache-manifest.c5a700449b4f7efcd74e8a8f85ca6701.js",
+    "service-worker.js": "/trippyTinctureProjectFive/service-worker.js",
+    "static/css/main.b100e6da.chunk.css.map": "/trippyTinctureProjectFive/static/css/main.b100e6da.chunk.css.map"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6ced5ce6.js",
+    "static/js/2.ea6da0cd.chunk.js",
+    "static/css/main.b100e6da.chunk.css",
+    "static/js/main.a3a279ed.chunk.js"
+  ]
+}
