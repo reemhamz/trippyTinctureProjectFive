@@ -30,30 +30,54 @@ class App extends Component {
       console.log('this is the story data',strings)
       // view the data we have in firebase on our console.log 
       const dayArray = strings[0];
+      const dayArrayCopy = [...dayArray];
+
       const latinArray = strings[1];
+      const latinArrayCopy = [...latinArray];
+
       const nightArray = strings[2];
-
-      console.log('the nighttime array', nightArray)
-      console.log('the daytime array', dayArray)
-      console.log('the latin array', latinArray)
+      const nightArrayCopy = [...nightArray];
+      // making a copy of the day array 
       
+      
+      
+      
+// create a function that randomizes multiple times over the selected phrases in the array and splices out whatever was already used during render
 
+      const randomDaySentence1 = dayArrayCopy.splice((Math.floor(Math.random(dayArrayCopy) * dayArrayCopy.length)), 1);
 
-      const randomDayIndex = (Math.floor(Math.random(dayArray) * dayArray.length))
-      const randomDayString = dayArray[randomDayIndex]
+      console.log('day array after splice', dayArrayCopy)
+      
+      const randomDaySentence2 = dayArrayCopy.splice((Math.floor(Math.random(dayArrayCopy) * dayArrayCopy.length)), 1);
+
+      console.log('random sentencessssss',randomDaySentence1,randomDaySentence2)
+
+      // console.log('here is the random day index thingyy', randomDaySentence1, randomDayIndex);
+      
+      // for (i = dayArrayCopy * length; i >= 0; i--) {
+      //   console.log(item)
+      // }
+
+      const randomDayString = dayArrayCopy[randomDaySentence1]
       console.log('this is the random day sentence', randomDayString)
 
-      const randomNightIndex = (Math.floor(Math.random(nightArray) * nightArray.length))
-      const randomNightString = nightArray[randomNightIndex]
+      const randomNightIndex = (Math.floor(Math.random(nightArrayCopy) * nightArrayCopy.length))
+      const randomNightString = nightArrayCopy[randomNightIndex]
       console.log('this is a random night sentence', randomNightString)
 
-      const randomLatinIndex = (Math.floor(Math.random(latinArray) * latinArray.length))
-      const randomLatinString = latinArray[randomLatinIndex]
+      const randomLatinIndex = (Math.floor(Math.random(latinArrayCopy) * latinArrayCopy.length))
+      const randomLatinString = latinArrayCopy[randomLatinIndex]
       console.log('this is the random latin string', randomLatinString)
 
 
       console.log('another instance of a latin sentence', randomLatinString)
       
+
+      
+      
+
+
+
       this.setState({
         data: storyData,
         nightPhrase: randomNightString,
