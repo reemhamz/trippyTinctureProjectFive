@@ -9,10 +9,15 @@ class App extends Component {
     this.state = {
       data: {},
       story: [],
-      nightPhrase: '',
-      dayPhrase: '',
-      latinPhrase: '',
+      dayPhrase1: '',
+      dayPhrase2: '',
+      nightPhrase1: '',
+      nightPhrase2: '',
+      latinPhrase1: '',
       latinPhrase2: 'this is a placeholder in english',
+      latinPhrase3: 'another placeholder',
+      latinPhrase4: 'another another',
+      latinPhrase5: 'wow the 5th latin phrase but english'
       
     }
   }
@@ -24,10 +29,9 @@ class App extends Component {
     dbRef.on('value', (snapshot) => {
       // make a variable that would refer to our firebase data
       const storyData = snapshot.val()
-      console.log('this is seeing the high data', storyData)
 
       const strings = Object.values(storyData)
-      console.log('this is the story data',strings)
+      // console.log('this is the story data',strings)
       // view the data we have in firebase on our console.log 
       const dayArray = strings[0];
       const dayArrayCopy = [...dayArray];
@@ -39,54 +43,42 @@ class App extends Component {
       const nightArrayCopy = [...nightArray];
       // making a copy of the day array 
       
-      
-      
-      
 // create a function that randomizes multiple times over the selected phrases in the array and splices out whatever was already used during render
 
+      // random day sentences 
       const randomDaySentence1 = dayArrayCopy.splice((Math.floor(Math.random(dayArrayCopy) * dayArrayCopy.length)), 1);
-
-      console.log('day array after splice', dayArrayCopy)
-      
       const randomDaySentence2 = dayArrayCopy.splice((Math.floor(Math.random(dayArrayCopy) * dayArrayCopy.length)), 1);
+      console.log('random day sentences',randomDaySentence1,randomDaySentence2)
 
-      console.log('random sentencessssss',randomDaySentence1,randomDaySentence2)
-
+      // random night sentences
+      const randomNightSentence1 = nightArrayCopy.splice((Math.floor(Math.random(nightArrayCopy) * nightArrayCopy.length)), 1)
+      const randomNightSentence2 = nightArrayCopy.splice((Math.floor(Math.random(nightArrayCopy) * nightArrayCopy.length)), 1)
+      console.log('random night sentences', randomNightSentence1, randomNightSentence2);
       // console.log('here is the random day index thingyy', randomDaySentence1, randomDayIndex);
-      
-      // for (i = dayArrayCopy * length; i >= 0; i--) {
-      //   console.log(item)
-      // }
-
-      const randomDayString = dayArrayCopy[randomDaySentence1]
-      console.log('this is the random day sentence', randomDayString)
-
-      const randomNightIndex = (Math.floor(Math.random(nightArrayCopy) * nightArrayCopy.length))
-      const randomNightString = nightArrayCopy[randomNightIndex]
-      console.log('this is a random night sentence', randomNightString)
-
-      const randomLatinIndex = (Math.floor(Math.random(latinArrayCopy) * latinArrayCopy.length))
-      const randomLatinString = latinArrayCopy[randomLatinIndex]
-      console.log('this is the random latin string', randomLatinString)
 
 
-      console.log('another instance of a latin sentence', randomLatinString)
-      
+      // random latin sentences
+      const randomLatinSentence1 = latinArrayCopy.splice((Math.floor(Math.random(latinArrayCopy) * latinArrayCopy.length)), 1)
+      const randomLatinSentence2 = latinArrayCopy.splice((Math.floor(Math.random(latinArrayCopy) * latinArrayCopy.length)), 1)
+      const randomLatinSentence3 = latinArrayCopy.splice((Math.floor(Math.random(latinArrayCopy) * latinArrayCopy.length)), 1)
+      const randomLatinSentence4 = latinArrayCopy.splice((Math.floor(Math.random(latinArrayCopy) * latinArrayCopy.length)), 1)
+      const randomLatinSentence5 = latinArrayCopy.splice((Math.floor(Math.random(latinArrayCopy) * latinArrayCopy.length)), 1)
+
+      console.log('THESE ARE ALL THE RANDOM LATIN SENTENCES', randomLatinSentence1, randomLatinSentence2, randomLatinSentence3, randomLatinSentence4, randomLatinSentence5)
 
       
-      
-
-
-
       this.setState({
         data: storyData,
-        nightPhrase: randomNightString,
-        dayPhrase: randomDayString,
-        latinPhrase: randomLatinString
+        dayPhrase1: randomDaySentence1,
+        dayPhrase2: randomDaySentence2,
+        nightPhrase1: randomNightSentence1,
+        latinPhrase1: randomLatinSentence1,
+        nightPhrase2: randomNightSentence2,
+        latinPhrase3: 'another placeholder',
+        latinPhrase4: 'another another',
+        latinPhrase5: 'wow the 5th latin phrase but english'
       })
-
     })
-
     
   }
   render() {
@@ -99,10 +91,8 @@ class App extends Component {
         <h3> 
           Your friend, a holistic nutritionist, made you an herbal tincture meant to help reduce your stress levels. You decide to enjoy the clear weather by heading to your favourite park right after having a some drops of the tincture.
       </h3>
-        <p>
-          {
-            this.state.nightPhrase
-          }
+        <p className="para">
+          {this.state.nightPhrase1} butt THEN AGAINN...... {this.state.latinPhrase1}
         </p>
         
         {/* Questions. When answered, they will add on to the story */}

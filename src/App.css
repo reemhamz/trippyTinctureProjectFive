@@ -2,6 +2,10 @@
   text-align: center;
 }
 
+.para{
+  background-color: pink;
+}
+
 .App-logo {
   height: 40vmin;
 }
