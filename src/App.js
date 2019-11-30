@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import firebase from './firebase'
+import Questions from './Questions'
 import './App.css';
 
 
@@ -78,40 +79,29 @@ class App extends Component {
         latinPhrase4: 'another another',
         latinPhrase5: 'wow the 5th latin phrase but english'
       })
+
     })
     
   }
   render() {
+
     return(
       
       <div className="App">
         {/* Enlightenment story is told here, where information retrived from my firebase database will append */}
         
         <h1>~Trippy Tincture~</h1>
-        <h3> 
+        <h3>  
           Your friend, a holistic nutritionist, made you an herbal tincture meant to help reduce your stress levels. You decide to enjoy the clear weather by heading to your favourite park right after having a some drops of the tincture.
       </h3>
         <p className="para">
-          {this.state.nightPhrase1} butt THEN AGAINN...... {this.state.latinPhrase1}
+          {this.state.nightPhrase1} || {this.state.latinPhrase1}
         </p>
         
-        {/* Questions. When answered, they will add on to the story */}
-        
-        <label htmlFor="timeOfDay">What's the time of day?</label>
-        <select name="dayOrNight" id="timeOfDay">
-          <option value="day">Daytime</option>
-          <option value="night">Nighttime</option>
-        </select>
-
-        <label htmlFor="amountTaken">How many drops of the tincture did you have?</label>
-        <select name="takenSelection" id="amountTaken">
-          <option value="small">Just a little, I know my limits</option>
-          <option value="medium">An appropriate amount</option>
-          <option value="large">I may have overdone it</option>
-        </select>
-        
-        {/* Will import a component here that is used to randomize all the information into a storyline. This component will be the story to be appended to the page.  */}
-        
+        <Questions getStoryProp={(e, choice) => {
+          e.preventDefault();
+          console.log(choice)
+        }}/>        
 
       </div>
     );
