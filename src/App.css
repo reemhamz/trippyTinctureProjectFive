@@ -1,5 +1,20 @@
+.wrapper{
+  max-width: 1280px;
+  width: 80%;
+  margin: 0 auto;
+}
+
 .App {
   text-align: center;
+}
+
+.daySpan{
+  color: orange;
+}
+
+.latinSpan{
+  mix-blend-mode: darken;
+  color: olive
 }
 
 .para{

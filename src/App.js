@@ -49,6 +49,7 @@ class App extends Component {
       // random day sentences 
       const randomDaySentence1 = dayArrayCopy.splice((Math.floor(Math.random(dayArrayCopy) * dayArrayCopy.length)), 1);
       const randomDaySentence2 = dayArrayCopy.splice((Math.floor(Math.random(dayArrayCopy) * dayArrayCopy.length)), 1);
+      const randomDaySentence3 = dayArrayCopy.splice((Math.floor(Math.random(dayArrayCopy) * dayArrayCopy.length)), 1);
       console.log('random day sentences',randomDaySentence1,randomDaySentence2)
 
       // random night sentences
@@ -72,22 +73,31 @@ class App extends Component {
         data: storyData,
         dayPhrase1: randomDaySentence1,
         dayPhrase2: randomDaySentence2,
+        dayPhrase3: randomDaySentence3,
         nightPhrase1: randomNightSentence1,
-        latinPhrase1: randomLatinSentence1,
         nightPhrase2: randomNightSentence2,
-        latinPhrase3: 'another placeholder',
-        latinPhrase4: 'another another',
-        latinPhrase5: 'wow the 5th latin phrase but english'
+        latinPhrase1: randomLatinSentence1,
+        latinPhrase2: 'You\'re not sure because it\'s a deprecated language that isn\'t supported by Internet Explorer',
+        latinPhrase3: 'Embraced by ancient rhythms of the world, history pushes its way into the present',
+        latinPhrase4: 'wow the 5th latin phrase but english',
+        latinPhrase5: 'All the possibilities lay spread out before you',
       })
 
     })
     
   }
+
+  getStory = (e, choice) => {
+    e.preventDefault();
+    console.log('from app.js, this is being clicked', choice)
+    // console.log('hiiiiiiiiiiiiii',this.props.state)
+  }
+
   render() {
 
     return(
       
-      <div className="App">
+      <div className="App wrapper">
         {/* Enlightenment story is told here, where information retrived from my firebase database will append */}
         
         <h1>~Trippy Tincture~</h1>
@@ -98,10 +108,12 @@ class App extends Component {
           {this.state.nightPhrase1} || {this.state.latinPhrase1}
         </p>
         
-        <Questions getStoryProp={(e, choice) => {
-          e.preventDefault();
-          console.log(choice)
-        }}/>        
+        <Questions getStoryProp={this.getStory} />  
+        
+        <p className="dayStory">This is the daytime story. After taking some drops of tincture, heading to the park sounded like the perfect plan. You leave the dooming comfort of your home and take a long walk to your favourite park where <span className="daySpan">{this.state.dayPhrase3}</span>. You relax on an empty bench in the middle of an empty park. Tempted to test out the effects of the ticture your friend recommended for so long to take. You thought it would be a good idea to enjoy it on a bright, sunny day where <span className="daySpan">{this.state.dayPhrase1}</span>. You close your eyes and feel the warmth of the sun gently looming over your face. You feel a heavy drowzines and notice that you feel more with your eyes closed while  <span className="daySpan">{this.state.dayPhrase2}</span>. You drift off into sleep. You hear a voice in the distance, <span className="latinSpan">"{this.state.latinPhrase1}"</span>. Was that latin? <span className="latinSpan">{this.state.latinPhrase2}</span>. You feel an alleviated sense of calmness washing over you as hear the voice in the distance getting closer to you echoing the harmony of the spheres floating up in outer space. "Each road taken holds challenges untold, which road you choose is how life unfolds. <span className="latinSpan">{this.state.latinPhrase3}</span>" echoed the voice in the vastless void of subconsciousness. Your senses have been heightened tenfold and you begin to see linear colour gradients zooming past your sides, eventuall displaying an ominous sphere of light directly infront of you. You make a profound realization that you are as limitless as chaos and nothingness. This epiphany brings about the release of all your axiety and worries that have plagued you all these months. " <span className="latinSpan">{this.state.latinPhrase5}</span>"</p>
+
+        <p className="nightStory">This is the night story... Halellujah </p>
+
 
       </div>
     );
