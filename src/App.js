@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 import firebase from "./firebase"
 import axios from "axios"
+import PokemonImages from './PokemonImages'
 import Questions from "./Questions"
 import "./App.css";
+import pokemonImageArray from "./PokemonImages";
 
 
 class App extends Component {
@@ -20,6 +22,7 @@ class App extends Component {
       latinPhrase3: "another placeholder",
       latinPhrase4: "another another",
       latinPhrase5: "wow the 5th latin phrase but english",
+      pokeTitle: '',
       pokeId: ''
       
     }
@@ -45,7 +48,7 @@ class App extends Component {
       const moveName = (result.data.moves[moveNumber].move.name).charAt(0).toUpperCase() + (result.data.moves[moveNumber].move.name).substr(1);
       console.log("this is the move name", moveName);
     })
-
+    
 
     
 
@@ -103,6 +106,7 @@ class App extends Component {
         latinPhrase2: "You're not sure because it's a deprecated language that isn't supported by Internet Explorer",
         latinPhrase3: "Embraced by ancient rhythms of the world, history pushes its way into the present",
         latinPhrase4: "All the possibilities lay spread out before you are both ever-changing and ever-the-same",
+        // pokeTitle: pokeName,
         pokeId: randomPokemon
       })
     })
@@ -135,11 +139,9 @@ class App extends Component {
         </header>
         
 
-        <div className="pokeImage">
-          IMAGE TO BE PLACED HEERE
-          
-        </div>
-        <img src={require("./assets/pokemon/"+{this.state.pokeId}+".svg")} alt="" />
+        
+        
+
 
         <section className="story">
           <div className="dayDiv">
@@ -148,6 +150,12 @@ class App extends Component {
 
           <div className="nightDiv">
             <p className="nightStory">This is the night story. After taking some drops of tincture, heading to the park sounded like the perfect plan. You leave the dooming comfort of your home and take a long walk to your favourite park where <span className="daySpan">{this.state.dayPhrase3}</span>. You relax on an empty bench in the middle of an empty park, tempted to test out the effects of the ticture. You thought it would be a good idea to enjoy it on a bright, sunny day where <span className="daySpan">{this.state.dayPhrase1}</span>. You close your eyes and feel the warmth of the sun gently looming over your face. You feel a heavy drowzines and notice that you feel more with your eyes closed while  <span className="daySpan">{this.state.dayPhrase2}</span>. You drift off into sleep. You hear a voice in the distance, <span className="latinSpan">"{this.state.latinPhrase1}"</span>. Was that latin? <span className="latinSpan">{this.state.latinPhrase2}</span>. You feel an alleviated sense of calmness washing over you as hear the voice in the distance getting closer to you echoing the harmony of the spheres floating up in outer space. "Each road taken holds challenges untold, which road you choose is how life unfolds. <span className="latinSpan">{this.state.latinPhrase3}</span>" echoed the voice in the vastless void of subconsciousness. Your senses have been heightened tenfold and you begin to see linear colour gradients zooming past your sides, eventuall displaying an ominous sphere of light directly infront of you. Before you know it, you extend your hand to reach for the floating orb and suddently make a profound realization that you are as limitless as chaos and nothingness. This epiphany brings about the release of all your axiety and worries that have plagued you all these months. "<span className="latinSpan">{this.state.latinPhrase4}</span>" was the last thing you heard from the orb before opening your eyes, with it, a wave of good fortune bids you adieu. You open up your eyes to <span className="nightSpan">{this.state.nightPhrase1}</span>.</p>
+            <div className="Images">
+          IMAGES TO BE PLACED HEERE
+        <img src={pokemonImageArray[this.state.pokeId]} alt="" className="pokeImg svgImg"/>
+        <img src={require("./assets/marioShroom.svg")} alt="A Super Mario-inspired mushroom" className="shroom svgImg"/>
+          
+        </div>
           </div>
 
       </section>

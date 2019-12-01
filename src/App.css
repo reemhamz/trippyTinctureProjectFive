@@ -25,6 +25,11 @@
   background-color: pink;
 }
 
+.shroom{
+  height: 100px;
+  width: 100px;
+}
+
 .App-logo {
   height: 40vmin;
 }
