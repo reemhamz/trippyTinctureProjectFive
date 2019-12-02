@@ -24,7 +24,8 @@ class App extends Component {
       latinPhrase5: "wow the 5th latin phrase but english",
       pokeTitle: '',
       pokeId: '',
-      pokeAttack: ''
+      pokeAttack: '',
+      childValue:''
       
     }
   }
@@ -108,8 +109,15 @@ class App extends Component {
     
   }
 
-  render() {
+  getChildState = (value) => {
+    this.setState({
+      childValue: value
+    })
+    console.log(value)
+  }
 
+  render() {
+    console.log('can you see this??????????')
     return(
       
       <div className="App wrapper">
@@ -127,7 +135,7 @@ class App extends Component {
           {this.state.nightPhrase1} || {this.state.latinPhrase1}
         </p>
         
-          <Questions getStoryProp={this.getStory}/> 
+          <Questions getStoryProp={this.getStory} getChildState={this.getChildState}/> 
         </header>
         
         

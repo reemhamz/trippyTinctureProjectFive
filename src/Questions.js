@@ -19,6 +19,8 @@ class SmallDose extends Component{
         this.setState({
             userChoice: e.target.value
         })
+        this.props.getChildState(e.target.value)
+
     }
     render() {
 
