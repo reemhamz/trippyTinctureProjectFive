@@ -6,6 +6,7 @@ class SmallDose extends Component{
         this.state= {
             timeChoice: '',
             doseChoice: '',
+
         }
 
         console.log('check the props thing', this.prop)
@@ -16,7 +17,7 @@ class SmallDose extends Component{
         // seeing the values of the choices that the user selects
         console.log('what will we see when we select?', e.target.value)
 
-        this.props.getTimeState(e.target.value)
+        // this.props.getTimeState(e.target.value)
         this.setState({
             timeChoice: e.target.value
         })
@@ -27,7 +28,7 @@ class SmallDose extends Component{
         // seeing the values of the choices that the user selects
         console.log('what will we see when we select?', e.target.value)
 
-        this.props.getDoseState(e.target.value)
+        // this.props.getDoseState(e.target.value)
         this.setState({
             doseChoice: e.target.value
         })
@@ -36,6 +37,8 @@ class SmallDose extends Component{
     // console.log('we have a dose thing', weHaveADose)
 
     submitClicked = (e) => {
+        this.props.getTimeState(this.state.timeChoice)
+        this.props.getDoseState(this.state.doseChoice)
         this.props.getStoryProp(e, this.state.timeChoice)
         if (this.state.timeChoice === "" || this.state.doseChoice === "") {
             alert('you have to select!')
@@ -43,7 +46,6 @@ class SmallDose extends Component{
     }
 
     
-
     render() {
 
         return (

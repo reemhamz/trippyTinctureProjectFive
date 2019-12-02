@@ -1,0 +1,53 @@
+@import "./partials/setup";
+@import "./partials/fonts";
+@import "./partials/firebaseSpans";
+
+
+.wrapper {
+    max-width: 1280px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+img{
+    max-width: 100%;
+}
+
+h1{
+    font-size: 5rem;
+}
+
+header{
+    height: 100vh;
+    background-image: url(../assets/trippyHeader.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.dayDiv{
+    height: 100vh;
+    background-image: url(../assets/dayBackground.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.nightDiv{
+    height: 100vh;
+    background-image: url(../assets/nightBackground.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.shroom {
+    height: 100px;
+    width: 100px;
+}
+
+.pokeImg {
+    height: 200px;
+    width: 200px;
+}
