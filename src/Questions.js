@@ -21,6 +21,7 @@ class SmallDose extends Component{
         })
     }
     render() {
+
         return (
             <div>
     <form action="">
