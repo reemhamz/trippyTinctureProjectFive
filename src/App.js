@@ -127,7 +127,7 @@ class App extends Component {
           {this.state.nightPhrase1} || {this.state.latinPhrase1}
         </p>
         
-          <Questions getStoryProp={this.getStory} poop={this.props.state.userChoice}/> 
+          <Questions getStoryProp={this.getStory}/> 
         </header>
         
         
