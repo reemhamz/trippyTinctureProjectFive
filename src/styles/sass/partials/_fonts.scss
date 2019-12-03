@@ -1,24 +1,30 @@
-@import url("https://fonts.googleapis.com/css?family=Barriecito|Spicy+Rice|McLaren|News+Cycle|Didact+Gothic&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Barriecito|Spicy+Rice|McLaren|News+Cycle|Didact+Gothic|Solway&display=swap");
 
 html{
     font-size: 62.5%;
 }
 h1{
-    font-size: 8rem;
+    font-size: 6.5rem;
     margin: 0;
     font-family: 'Spicy Rice', cursive;
-    letter-spacing: 10px;
     font-weight: lighter;
     background: linear-gradient(to right, #8b2f97 20%, #fe6845 50%, #9d0b0b 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    position: relative;
+    @include mqBigPhone{
+        font-size: 5rem;
+    }
+    @include mqMedPhone{
+        font-size: 3.8rem;
+    }
 }
 
-h2, label{
-    font-size: 3rem;
+h2, label, select, option, button{
+    font-size: 2.3rem;
     font-family: 'Didact Gothic', sans-serif;
-    
+    @include mqBigPhone{
+        font-size: 1.9rem;
+    }
 }
 
 h2{
@@ -35,31 +41,41 @@ label{
 }
 
 select{
-    font-size: 2.5rem;
-    font-family: 'Didact Gothic', sans-serif;
     background-color: #ffc6c7;
     text-align: center;
 }
 
-
 button{
     padding: 10px;
     width: 50%;
-    // margin-top: 40px;
-    font-size: 2.5rem;
-    color: black;
+    // font-size: 2.5rem;
+    color: white;
     background-color: #f77754;
     border-radius: 10px;
     transition: 0.3s;
-    margin: 30px auto;
+    margin: 20px auto;
     &:hover{
         background-color:  #01d28e;
         border: 4px solid #29a19c;
     }
 }
 
-p{
-    font-size: 2rem;
+h3{
+    font-family: 'Solway', serif;
+    font-size: 4rem;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    font-weight: bolder;
     margin: 0;
+    padding: 20px 0;
+    border-bottom: 10px dotted white;
+}
+p{
+    font-size: 1.8rem;
+    margin: 0;
+    @include mqTablet{
+        font-size: 1.5rem;
+    }
+    
 }
 

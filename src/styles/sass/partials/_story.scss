@@ -4,24 +4,37 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    h3{
+        color: #dc5353;
+        text-shadow: 2px 2px white;
+        border: none;
+    }
+    p{
+        background-color: rgba(242,243,243,0.7);
+        border-radius: 20px;
+        margin-bottom: 10px;
+        padding: 0 20px;
+    }
 }
 
 .nightDiv{
-    height: 100vh;
     background-image: url(../assets/nightBackground.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    .nightStory p{
-        background-color: rgba(242,243,243,0.8);
+    padding-top: 30px;
+    h3{
+        color: #ffd800;
+        text-shadow: 0px 0px 40px #ffd800;
+    }
+    .nightStory {
         border-radius: 30px;
-        border: 7px solid #ec9b3b;
-        padding: 20px;
+        text-shadow: 0px 0px 50px white;
+        color: white;
     }
     .images{
         filter:brightness(50%)
     }
-
 }
 
 .storyPage{
@@ -42,10 +55,34 @@
 .shroom {
     height: 100px;
     width: 100px;
-    text-align: left;
+    @include mqTablet{
+        height: 50px;
+        width: 50px;
+    }
 }
 
 .pokeImg {
     height: 200px;
     width: 200px;
+    @include mqTablet{
+        height: 100px;
+        width: 100px;
+    }
+}
+
+.latinSpan {
+    display: inline-block;
+    position: relative;
+    font-weight: bolder;
+    &::before{
+        content: '';
+        background: green;
+        display: inline-block;
+        height: 8px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 3px;
+        z-index: -1;
+    }
 }

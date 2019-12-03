@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Barriecito|Spicy+Rice|McLaren|News+Cycle|Didact+Gothic&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Barriecito|Spicy+Rice|McLaren|News+Cycle|Didact+Gothic|Solway&display=swap");
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
   display: block;
 }
@@ -185,21 +185,37 @@ html {
 }
 
 h1 {
-  font-size: 8rem;
+  font-size: 6.5rem;
   margin: 0;
   font-family: 'Spicy Rice', cursive;
-  letter-spacing: 10px;
   font-weight: lighter;
   background: -webkit-gradient(linear, left top, right top, color-stop(20%, #8b2f97), color-stop(50%, #fe6845), to(#9d0b0b));
   background: linear-gradient(to right, #8b2f97 20%, #fe6845 50%, #9d0b0b 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  position: relative;
 }
 
-h2, label {
-  font-size: 3rem;
+@media (max-width: 640px) {
+  h1 {
+    font-size: 5rem;
+  }
+}
+
+@media (max-width: 530px) {
+  h1 {
+    font-size: 3.8rem;
+  }
+}
+
+h2, label, select, option, button {
+  font-size: 2.3rem;
   font-family: 'Didact Gothic', sans-serif;
+}
+
+@media (max-width: 640px) {
+  h2, label, select, option, button {
+    font-size: 1.9rem;
+  }
 }
 
 h2 {
@@ -216,8 +232,6 @@ label {
 }
 
 select {
-  font-size: 2.5rem;
-  font-family: 'Didact Gothic', sans-serif;
   background-color: #ffc6c7;
   text-align: center;
 }
@@ -225,13 +239,12 @@ select {
 button {
   padding: 10px;
   width: 50%;
-  font-size: 2.5rem;
-  color: black;
+  color: white;
   background-color: #f77754;
   border-radius: 10px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  margin: 30px auto;
+  margin: 20px auto;
 }
 
 button:hover {
@@ -239,9 +252,26 @@ button:hover {
   border: 4px solid #29a19c;
 }
 
-p {
-  font-size: 2rem;
+h3 {
+  font-family: 'Solway', serif;
+  font-size: 4rem;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  font-weight: bolder;
   margin: 0;
+  padding: 20px 0;
+  border-bottom: 10px dotted white;
+}
+
+p {
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+@media (max-width: 875px) {
+  p {
+    font-size: 1.5rem;
+  }
 }
 
 .dayDiv {
@@ -252,19 +282,36 @@ p {
   background-size: cover;
 }
 
+.dayDiv h3 {
+  color: #dc5353;
+  text-shadow: 2px 2px white;
+  border: none;
+}
+
+.dayDiv p {
+  background-color: rgba(242, 243, 243, 0.7);
+  border-radius: 20px;
+  margin-bottom: 10px;
+  padding: 0 20px;
+}
+
 .nightDiv {
-  height: 100vh;
   background-image: url(../assets/nightBackground.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  padding-top: 30px;
 }
 
-.nightDiv .nightStory p {
-  background-color: rgba(242, 243, 243, 0.8);
+.nightDiv h3 {
+  color: #ffd800;
+  text-shadow: 0px 0px 40px #ffd800;
+}
+
+.nightDiv .nightStory {
   border-radius: 30px;
-  border: 7px solid #ec9b3b;
-  padding: 20px;
+  text-shadow: 0px 0px 50px white;
+  color: white;
 }
 
 .nightDiv .images {
@@ -305,7 +352,13 @@ p {
 .shroom {
   height: 100px;
   width: 100px;
-  text-align: left;
+}
+
+@media (max-width: 875px) {
+  .shroom {
+    height: 50px;
+    width: 50px;
+  }
 }
 
 .pokeImg {
@@ -313,10 +366,41 @@ p {
   width: 200px;
 }
 
+@media (max-width: 875px) {
+  .pokeImg {
+    height: 100px;
+    width: 100px;
+  }
+}
+
+.latinSpan {
+  display: inline-block;
+  position: relative;
+  font-weight: bolder;
+}
+
+.latinSpan::before {
+  content: '';
+  background: green;
+  display: inline-block;
+  height: 8px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 3px;
+  z-index: -1;
+}
+
 .wrapper {
   max-width: 1280px;
   width: 80%;
   margin: 0 auto;
+}
+
+@media (max-width: 950px) {
+  .wrapper {
+    width: 100%;
+  }
 }
 
 img {
@@ -344,7 +428,7 @@ header {
 
 header .titleScreen {
   text-align: center;
-  padding: 30px 20px;
+  padding: 10px 30px;
   width: 55%;
   background-color: rgba(242, 243, 243, 0.9);
   border-radius: 30px;
@@ -352,28 +436,29 @@ header .titleScreen {
           box-shadow: 10px 7px 6px 8px rgba(255, 224, 18, 0.82);
 }
 
-.dayDiv {
-  height: 100vh;
-  background-image: url(../assets/dayBackground.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+@media (max-width: 1040px) {
+  header .titleScreen {
+    width: 70%;
+  }
 }
 
-.nightDiv {
-  height: 100vh;
-  background-image: url(../assets/nightBackground.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+@media (max-width: 875px) {
+  header .titleScreen {
+    width: 75%;
+  }
 }
 
-.shroom {
-  height: 100px;
-  width: 100px;
+@media (max-width: 530px) {
+  header .titleScreen {
+    width: 85%;
+    padding: 10px;
+  }
 }
 
-.pokeImg {
-  height: 200px;
-  width: 200px;
+@media (max-width: 430px) {
+  header .titleScreen {
+    width: 100%;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
 }

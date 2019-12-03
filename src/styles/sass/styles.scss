@@ -1,6 +1,6 @@
 @import "./partials/setup";
+@import "./partials/mixins";
 @import "./partials/fonts";
-@import "./partials/firebaseSpans";
 @import "./partials/story";
 
 
@@ -8,6 +8,9 @@
     max-width: 1280px;
     width: 80%;
     margin: 0 auto;
+    @include mqBigTablet{
+        width: 100%;
+    }
 }
 
 img{
@@ -27,37 +30,32 @@ header{
     align-items: center;
     .titleScreen{
         text-align: center;
-        padding: 30px 20px;
+        padding: 10px 30px;
         width: 55%;
         background-color: rgba(242,243,243,0.9);
         border-radius: 30px;
-        box-shadow: 10px 7px 6px 8px rgba(255,224,18,0.82)
-
+        box-shadow: 10px 7px 6px 8px rgba(255,224,18,0.82);
     }
 }
 
-.dayDiv{
-    height: 100vh;
-    background-image: url(../assets/dayBackground.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+header{
+    .titleScreen{
+        @include mqSmallLaptop{
+                width: 70%;
+            }
+        @include mqTablet{
+                width: 75%;
+            }
+        @include mqMedPhone{
+            width: 85%;
+            padding: 10px;
+        }
+        @include mqSmallPhone{
+            width: 100%;
+            box-shadow: none;
+        }
+    }
+
 }
 
-.nightDiv{
-    height: 100vh;
-    background-image: url(../assets/nightBackground.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
 
-.shroom {
-    height: 100px;
-    width: 100px;
-}
-
-.pokeImg {
-    height: 200px;
-    width: 200px;
-}
