@@ -9,6 +9,7 @@
     margin: 0 auto;
     justify-content: flex-end;
     @include mqBigPhone{
+        justify-content: center;
     }
     p{
         background-color: rgba(242,243,243,0.5);

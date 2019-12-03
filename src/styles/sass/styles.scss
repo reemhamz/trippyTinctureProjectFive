@@ -3,6 +3,9 @@
 @import "./partials/fonts";
 @import "./partials/story";
 
+$footerDay: #80AC73;
+$footerNight: #170E1C;
+
 .wrapper {
     max-width: 1280px;
     width: 80%;
@@ -67,10 +70,10 @@ header{
     border-top: 2px solid white;
 }
 .dayFooter{
-    background-color: #80AC73;
+    background-color: $footerDay;
 }
 
 .nightFooter{
-    background-color: #170E1C;
+    background-color: $footerNight;
     text-shadow: 0px 0px 4px white;
 }
