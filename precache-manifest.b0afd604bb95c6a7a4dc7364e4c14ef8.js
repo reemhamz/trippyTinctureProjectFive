@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0932fd2b67defc8a65050db7d0f52dd9",
+    "revision": "1196652a2a8c3800976bedd5e946c516",
     "url": "/trippyTinctureProjectFive/index.html"
   },
   {
-    "revision": "205ddb8b72d39f65b3ac",
-    "url": "/trippyTinctureProjectFive/static/css/main.ee7882d0.chunk.css"
+    "revision": "255fd1db0d8fddf28c97",
+    "url": "/trippyTinctureProjectFive/static/css/main.80ff8c74.chunk.css"
   },
   {
     "revision": "46bfb70f3565cb6d2f6b",
     "url": "/trippyTinctureProjectFive/static/js/2.d89c3305.chunk.js"
   },
   {
-    "revision": "205ddb8b72d39f65b3ac",
-    "url": "/trippyTinctureProjectFive/static/js/main.342fdb1d.chunk.js"
+    "revision": "255fd1db0d8fddf28c97",
+    "url": "/trippyTinctureProjectFive/static/js/main.b0fb8fab.chunk.js"
   },
   {
     "revision": "7933857438641faec7d7",

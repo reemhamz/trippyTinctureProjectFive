@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/trippyTinctureProjectFive/precache-manifest.41dc260003e2972e71adc366348d29c4.js"
+  "/trippyTinctureProjectFive/precache-manifest.b0afd604bb95c6a7a4dc7364e4c14ef8.js"
 );
 
 self.addEventListener('message', (event) => {
