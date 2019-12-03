@@ -180,7 +180,7 @@ class App extends Component {
         < div className="App" >
           {this.state.timeValue === "day" && this.state.doseValue !== "" ? (
             <>
-              <section className="dayDiv">
+              <main className="dayDiv">
                 <div className="wrapper storyPage">
                   <h3>The trip under the sun</h3>
                   <div className="storyBox">
@@ -198,7 +198,7 @@ class App extends Component {
                   <button tabindex="0" onClick={this.resetButton}>Take the Tincture Another Day</button>
                   
                 </div>
-              </section>
+              </main>
               <footer className="dayFooter">
                 <p>© <a href="https://twitter.com/reemhamz">Reem Hamoui</a> Juno College 2019</p>
                 <p className="credits">Header background by <a href="https://dribbble.com/weiming">Weiming</a>, story backgrounds by <a href="https://www.reddit.com/r/wallpapers/comments/1tqe9k/update_new_version_of_the_8bit_day_wallpaper_set/">some Redditors</a>, custom Pokémon sprites by <a href="https://eev.ee/">Eevee</a></p>
@@ -208,7 +208,7 @@ class App extends Component {
             : null}
           {this.state.timeValue === "night" && this.state.doseValue !== "" && (
             <>
-              <section className="nightDiv">
+              <main className="nightDiv">
                 <div className="wrapper storyPage">
                   <h3>The nightly trip</h3>
                   <div className="storyBox">
@@ -225,7 +225,7 @@ class App extends Component {
                 </div>
             
                   
-              </section>
+              </main>
               <footer className="nightFooter">
                 <p>© <a href="https://twitter.com/reemhamz">Reem Hamoui</a>  Juno College 2019</p>
                 <p className="credits">Header background by <a href="https://dribbble.com/weiming">Weiming</a>, story backgrounds by <a href="https://www.reddit.com/r/wallpapers/comments/1tqe9k/update_new_version_of_the_8bit_day_wallpaper_set/">some Redditors</a>, custom Pokémon sprites by <a href="https://eev.ee/">Eevee</a></p>
