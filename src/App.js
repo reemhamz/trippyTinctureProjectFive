@@ -5,6 +5,7 @@ import PokemonImages from "./PokemonImages";
 import Questions from "./Questions";
 import "./App.css";
 import "./styles/styles.css";
+
 import pokemonImageArray from "./PokemonImages";
 import jump from "jump.js";
 
@@ -149,14 +150,21 @@ class App extends Component {
       doseValue: "",
       pokeId: newRandomPokemon
     });
+    
+    jump('.target', {
+      duration: 1000,
+      offset: 0,
+      callback: undefined,
+      a11y: false
+    })
   };
 
   render() {
     return (
       <>
-        
+        <a href="#mainContent" className="skip-link">Skip to main content.</a>
         <header>
-          <div className="titleScreen wrapper">
+          <div className="titleScreen wrapper #mainContent">
             <h1>Trippy <span aria-label="potion emoji" role="img">🧪</span> Tincture</h1>
             <h2>
               Your friend, a holistic nutritionist, made you an herbal tincture meant to help reduce your stress levels. You decide to enjoy the clear weather by heading to your favourite park right after having a some drops of the tincture.
@@ -181,8 +189,8 @@ class App extends Component {
                 <span className="latinSpan">{this.state.latinPhrase3}</span>!" You blink twice this time to see <span className="nightSpan">{this.state.nightPhrase1}</span>. Totally confused at the scene of what happened, you turn the tincture bottle to read the label, noticing <span className="trippySpan"><em>Trippy Tincture</em></span> written in size 0.2rem font. As the stars finally appear and twinkle behind the dimming canvas of the moon, you hear one last reverberation, "<span className="latinSpan">{this.state.latinPhrase4}</span>!"</p>
                   </div>
                   <div className="images">
-                    <img src={require("./assets/marioShroom.svg")} alt="A Super Mario-inspired mushroom" className="shroom svgImg" />
-                    <img src={pokemonImageArray[this.state.pokeId - 1]} alt="" className="pokeImg svgImg" />
+                    <img src={require("./assets/marioShroom.svg")} alt="A Super Mario-inspired mushroom" className="shroom svgImg animated infinite pulse" />
+                    <img src={pokemonImageArray[this.state.pokeId - 1]} alt="" className="pokeImg svgImg animated infinite flash" />
                   </div>
                 
                   <button onClick={this.resetButton}>Take the Tincture Again</button>
@@ -206,8 +214,8 @@ class App extends Component {
                     <p className="nightStory">Suddenly, a {this.state.pokeTitle} appears! It's what has been barking to you this whole time. {this.state.pokeTitle} attacks you with {this.state.pokeAttack} while screaming " <span className="latinSpan">{this.state.latinPhrase3}</span>!" You open up your eyes to reality and look up to see how <span className="daySpan">{this.state.dayPhrase1}</span>. Totally confused at the scene of what happened, you turn the tincture bottle to read the label, noticing <span className="trippySpan"><em>Trippy Tincture</em></span> written in size 0.2rem font. As the stars finally hide behind the light of the rising sun, you hear one last reverberation, "<span className="latinSpan">{this.state.latinPhrase4}</span>!"</p>
                   </div>
                   <div className="images">
-                    <img src={require("./assets/marioShroom.svg")} alt="A Super Mario-inspired mushroom" className="shroom svgImg" />
-                    <img src={pokemonImageArray[this.state.pokeId - 1]} alt="" className="pokeImg svgImg" />
+                    <img src={require("./assets/marioShroom.svg")} alt="A Super Mario-inspired mushroom" className="shroom svgImg animated infinite pulse" />
+                    <img src={pokemonImageArray[this.state.pokeId - 1]} alt="" className="pokeImg svgImg animated infinite flash" />
                   
                   </div>
                   <button onClick={this.resetButton}>Take the Tincture Again</button>
@@ -218,7 +226,7 @@ class App extends Component {
                 <p>© Reem Hamoui Juno College 2019</p>
               </footer>
             </>
-          )};
+          )}
           
         </div>
       </>

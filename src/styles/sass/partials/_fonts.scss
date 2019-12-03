@@ -80,8 +80,8 @@ p{
     @include mqTablet{
         font-size: 1.5rem;
     }
-    @include mqMedPhone{
-        font-size: 1.1rem;
+    @include mqSmallPhone{
+        font-size: 1.2rem;
     }
     
 }
