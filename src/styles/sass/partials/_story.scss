@@ -1,0 +1,51 @@
+.dayDiv{
+    height: 100vh;
+    background-image: url(../assets/dayBackground.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.nightDiv{
+    height: 100vh;
+    background-image: url(../assets/nightBackground.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .nightStory p{
+        background-color: rgba(242,243,243,0.8);
+        border-radius: 30px;
+        border: 7px solid #ec9b3b;
+        padding: 20px;
+    }
+    .images{
+        filter:brightness(50%)
+    }
+
+}
+
+.storyPage{
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    margin: 0 auto;
+    justify-content: flex-end;
+}
+
+.images{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+.shroom {
+    height: 100px;
+    width: 100px;
+    text-align: left;
+}
+
+.pokeImg {
+    height: 200px;
+    width: 200px;
+}

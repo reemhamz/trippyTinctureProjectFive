@@ -225,31 +225,92 @@ select {
 button {
   padding: 10px;
   width: 50%;
-  margin-top: 40px;
   font-size: 2.5rem;
-  background-image: -webkit-gradient(linear, left top, right top, from(#84fab0), color-stop(51%, #8fd3f4), to(#84fab0));
-  background-image: linear-gradient(to right, #84fab0 0%, #8fd3f4 51%, #84fab0 100%);
-  text-transform: uppercase;
-  -webkit-box-shadow: 0 0 20px #eee;
-          box-shadow: 0 0 20px #eee;
+  color: black;
+  background-color: #f77754;
   border-radius: 10px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  margin: 30px auto;
+}
+
+button:hover {
+  background-color: #01d28e;
+  border: 4px solid #29a19c;
 }
 
 p {
   font-size: 2rem;
+  margin: 0;
 }
 
-.daySpan {
-  color: orange;
+.dayDiv {
+  height: 100vh;
+  background-image: url(../assets/dayBackground.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.nightSpan {
-  color: blue;
+.nightDiv {
+  height: 100vh;
+  background-image: url(../assets/nightBackground.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.latinSpan {
-  mix-blend-mode: darken;
-  color: olive;
+.nightDiv .nightStory p {
+  background-color: rgba(242, 243, 243, 0.8);
+  border-radius: 30px;
+  border: 7px solid #ec9b3b;
+  padding: 20px;
+}
+
+.nightDiv .images {
+  -webkit-filter: brightness(50%);
+          filter: brightness(50%);
+}
+
+.storyPage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 auto;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.shroom {
+  height: 100px;
+  width: 100px;
+  text-align: left;
+}
+
+.pokeImg {
+  height: 200px;
+  width: 200px;
 }
 
 .wrapper {
