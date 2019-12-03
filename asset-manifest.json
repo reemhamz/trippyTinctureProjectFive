@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/trippyTinctureProjectFive/static/css/main.ac03d526.chunk.css",
-    "main.js": "/trippyTinctureProjectFive/static/js/main.dd4134af.chunk.js",
-    "main.js.map": "/trippyTinctureProjectFive/static/js/main.dd4134af.chunk.js.map",
+    "main.css": "/trippyTinctureProjectFive/static/css/main.5f44599d.chunk.css",
+    "main.js": "/trippyTinctureProjectFive/static/js/main.c2408955.chunk.js",
+    "main.js.map": "/trippyTinctureProjectFive/static/js/main.c2408955.chunk.js.map",
     "runtime-main.js": "/trippyTinctureProjectFive/static/js/runtime-main.6ced5ce6.js",
     "runtime-main.js.map": "/trippyTinctureProjectFive/static/js/runtime-main.6ced5ce6.js.map",
-    "static/js/2.2a3434c8.chunk.js": "/trippyTinctureProjectFive/static/js/2.2a3434c8.chunk.js",
-    "static/js/2.2a3434c8.chunk.js.map": "/trippyTinctureProjectFive/static/js/2.2a3434c8.chunk.js.map",
+    "static/js/2.3005c7a8.chunk.js": "/trippyTinctureProjectFive/static/js/2.3005c7a8.chunk.js",
+    "static/js/2.3005c7a8.chunk.js.map": "/trippyTinctureProjectFive/static/js/2.3005c7a8.chunk.js.map",
     "index.html": "/trippyTinctureProjectFive/index.html",
-    "precache-manifest.64cb76a8ebd811e0fc1d870194c42adc.js": "/trippyTinctureProjectFive/precache-manifest.64cb76a8ebd811e0fc1d870194c42adc.js",
+    "precache-manifest.807a479c352704e5891525861d6131ad.js": "/trippyTinctureProjectFive/precache-manifest.807a479c352704e5891525861d6131ad.js",
     "service-worker.js": "/trippyTinctureProjectFive/service-worker.js",
-    "static/css/main.ac03d526.chunk.css.map": "/trippyTinctureProjectFive/static/css/main.ac03d526.chunk.css.map",
+    "static/css/main.5f44599d.chunk.css.map": "/trippyTinctureProjectFive/static/css/main.5f44599d.chunk.css.map",
     "static/media/1.svg": "/trippyTinctureProjectFive/static/media/1.046230a2.svg",
     "static/media/10.svg": "/trippyTinctureProjectFive/static/media/10.e1df3cd3.svg",
     "static/media/100.svg": "/trippyTinctureProjectFive/static/media/100.9b80d2a2.svg",
@@ -500,8 +500,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.6ced5ce6.js",
-    "static/js/2.2a3434c8.chunk.js",
-    "static/css/main.ac03d526.chunk.css",
-    "static/js/main.dd4134af.chunk.js"
+    "static/js/2.3005c7a8.chunk.js",
+    "static/css/main.5f44599d.chunk.css",
+    "static/js/main.c2408955.chunk.js"
   ]
 }
