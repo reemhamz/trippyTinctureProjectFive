@@ -90,3 +90,10 @@ p{
     font-size: 1.5rem;
 }
 
+a{
+    color: white;
+    &:hover{
+        color: #f45905;
+        text-shadow: none;
+    }
+}
