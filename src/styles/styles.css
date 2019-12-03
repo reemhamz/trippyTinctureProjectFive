@@ -291,6 +291,10 @@ p {
   }
 }
 
+.swal2-popup {
+  font-size: 1.5rem;
+}
+
 .App {
   overflow: hidden;
 }
@@ -350,7 +354,7 @@ p {
 .nightDiv .nightStory {
   text-shadow: 0px 0px 10px white;
   color: white;
-  background-color: rgba(242, 243, 243, 0.3);
+  background-color: rgba(242, 243, 243, 0.1);
 }
 
 .nightDiv .images {
@@ -397,10 +401,6 @@ p {
     height: 150px;
     width: 150px;
   }
-}
-
-.latinSpan {
-  font-weight: bolder;
 }
 
 .wrapper {

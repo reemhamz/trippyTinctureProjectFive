@@ -33,7 +33,6 @@ class App extends Component {
   }
   // Connecting application to firebase database where I have objects stored that hold information that adds to the story
   componentDidMount() {
-    document.title = "Trippy Tincture";
 
     const randomPokemon = Math.floor(Math.random() * 484) + 1;
     
@@ -144,19 +143,22 @@ class App extends Component {
   };
 
   resetButton = () => {
-    const newRandomPokemon = Math.floor(Math.random() * 484) + 1;
-    this.setState({
-      timeValue: "",
-      doseValue: "",
-      pokeId: newRandomPokemon
-    });
     
-    jump('.target', {
+    jump('header', {
       duration: 1000,
       offset: 0,
-      callback: undefined,
-      a11y: false
+      callback: () => {
+        const newRandomPokemon = Math.floor(Math.random() * 484) + 1;
+      this.setState({
+        timeValue: "",
+        doseValue: "",
+        a11y: false,
+        pokeId: newRandomPokemon
+      });
+      }      
     })
+    
+    
   };
 
   render() {
@@ -183,17 +185,17 @@ class App extends Component {
                   <h3>The trip under the sun</h3>
                   <div className="storyBox">
                 
-                    <p className="dayStory">After taking some drops of tincture, you take a long walk to your favourite park where <span className="daySpan">{this.state.dayPhrase1}</span>. You thought it would be a good idea to enjoy it on a bright, sunny day where <span className="daySpan">{this.state.dayPhrase2}</span>. You feel your body being lifted up towards the light of the sun, then you blink and find yourself back on the grass, but this time you're in an empty field facing the ocean. However, why do you seem so short? You look down and you're now a confused little mushroom. You look up and see how <span className="daySpan">{this.state.dayPhrase3}</span>. A voice in the distance beckons: "<span className="latinSpan">{this.state.latinPhrase1}</span>". Was that latin? You're not sure because it's a deprecated language that isn't supported by Internet Explorer. "<span className="latinSpan">{this.state.latinPhrase2}</span>." echoed the voice in the vastless void of your own awake consciousness. </p>
+                    <p className="dayStory">After taking some drops of tincture, you take a long walk to your favourite park where <span className="daySpan">{this.state.dayPhrase1}</span>. You thought it would be a good idea to enjoy it on a bright, sunny day where <span className="daySpan">{this.state.dayPhrase2}</span>. You feel your body being lifted up towards the light of the sun, then you blink and find yourself back on the grass, but this time you're in an empty field facing the ocean. However, why do you seem so short? You look down and you're now a confused little mushroom. You look up and see how <span className="daySpan">{this.state.dayPhrase3}</span>. A voice in the distance beckons: <strong>"<span className="latinSpan">{this.state.latinPhrase1}</span>"</strong>. Was that latin? You're not sure because it's a deprecated language that isn't supported by Internet Explorer. <strong>"<span className="latinSpan">{this.state.latinPhrase2}</span>"</strong> echoed the voice in the vastless void of your own awake consciousness. </p>
                 
                     <p className="dayStory">Suddenly, a {this.state.pokeTitle} appears! It's what has been barking to you this whole time. It attacks you with {this.state.pokeAttack} while screaming "
-                <span className="latinSpan">{this.state.latinPhrase3}</span>!" You blink twice this time to see <span className="nightSpan">{this.state.nightPhrase1}</span>. Totally confused at the scene of what happened, you turn the tincture bottle to read the label, noticing <span className="trippySpan"><em>Trippy Tincture</em></span> written in size 0.2rem font. As the stars finally appear and twinkle behind the dimming canvas of the moon, you hear one last reverberation, "<span className="latinSpan">{this.state.latinPhrase4}</span>!"</p>
+                <strong><span className="latinSpan">{this.state.latinPhrase3}</span>!"</strong> You blink twice this time to see <span className="nightSpan">{this.state.nightPhrase1}</span>. Totally confused at the scene of what happened, you turn the tincture bottle to read the label, noticing <span className="trippySpan"><em>Trippy Tincture</em></span> written in size 0.2rem font. As the stars finally appear and twinkle behind the dimming canvas of the moon, you hear one last reverberation, <strong>"<span className="latinSpan">{this.state.latinPhrase4}</span>!"</strong></p>
                   </div>
                   <div className="images">
                     <img src={require("./assets/marioShroom.svg")} alt="A Super Mario-inspired mushroom" className="shroom svgImg animated infinite pulse" />
-                    <img src={pokemonImageArray[this.state.pokeId - 1]} alt="" className="pokeImg svgImg animated infinite flash" />
+                    <img src={pokemonImageArray[this.state.pokeId - 1]} alt={`A Pokémon by the name of ${this.state.pokeTitle}`} className="pokeImg svgImg animated infinite flash" />
                   </div>
                 
-                  <button onClick={this.resetButton}>Take the Tincture Again</button>
+                  <button tabindex="0" onClick={this.resetButton}>Take the Tincture Another Day</button>
                 </div>
               </section>
               <footer className="dayFooter">
@@ -209,16 +211,16 @@ class App extends Component {
                 <div className="wrapper storyPage">
                   <h3>The nightly trip</h3>
                   <div className="storyBox">
-                    <p className="nightStory">After taking some drops of tincture, you took a nightly stroll to your favourite park where <span className="nightSpan">{this.state.nightPhrase1}</span>. You thought it would be a good idea to enjoy the relief the tincture promised during a calming, dark evening where nobody would be around to bother you much. Looking up, you notice <span className="nightSpan">{this.state.nightPhrase2}</span>. You settle down to sit on the grass and endure a floating sensation of your body being lifted up towards the white light of the moon. You blink and find yourself back on the grass, but this time you're in an empty field facing the ocean while <span className="nightSpan">{this.state.nightPhrase3}</span>. Although, why do you seem so close to the ground? You look down and find yourself to be a mere fungi of the earth, a little bemused. A voice in the distance beckons: "<span className="latinSpan">{this.state.latinPhrase1}</span>". Was that latin? You're not sure because it's a deprecated language that isn't supported by Internet Explorer. "<span className="latinSpan">{this.state.latinPhrase2}</span>" echoed the voice in the vastless void of your awake consciousness.</p>
+                    <p className="nightStory">After taking some drops of tincture, you took a nightly stroll to your favourite park where <span className="nightSpan">{this.state.nightPhrase1}</span>. You thought it would be a good idea to enjoy the relief the tincture promised during a calming, dark evening where nobody would be around to bother you much. Looking up, you notice <span className="nightSpan">{this.state.nightPhrase2}</span>. You settle down to sit on the grass and endure a floating sensation of your body being lifted up towards the white light of the moon. You blink and find yourself back on the grass, but this time you're in an empty field facing the ocean while <span className="nightSpan">{this.state.nightPhrase3}</span>. Although, why do you seem so close to the ground? You look down and find yourself to be a mere fungi of the earth, a little bemused. A voice in the distance beckons: <strong>"<span className="latinSpan">{this.state.latinPhrase1}</span>"</strong>. Was that latin? You're not sure because it's a deprecated language that isn't supported by Internet Explorer. <strong>"<span className="latinSpan">{this.state.latinPhrase2}</span>"</strong> echoed the voice in the vastless void of your awake consciousness.</p>
                 
-                    <p className="nightStory">Suddenly, a {this.state.pokeTitle} appears! It's what has been barking to you this whole time. {this.state.pokeTitle} attacks you with {this.state.pokeAttack} while screaming " <span className="latinSpan">{this.state.latinPhrase3}</span>!" You open up your eyes to reality and look up to see how <span className="daySpan">{this.state.dayPhrase1}</span>. Totally confused at the scene of what happened, you turn the tincture bottle to read the label, noticing <span className="trippySpan"><em>Trippy Tincture</em></span> written in size 0.2rem font. As the stars finally hide behind the light of the rising sun, you hear one last reverberation, "<span className="latinSpan">{this.state.latinPhrase4}</span>!"</p>
+                    <p className="nightStory">Suddenly, a {this.state.pokeTitle} appears! It's what has been barking to you this whole time. {this.state.pokeTitle} attacks you with {this.state.pokeAttack} while screaming <strong>"<span className="latinSpan">{this.state.latinPhrase3}</span>!"</strong> You open up your eyes to reality and look up to see how <span className="daySpan">{this.state.dayPhrase1}</span>. Totally confused at the scene of what happened, you turn the tincture bottle to read the label, noticing <span className="trippySpan"><em>Trippy Tincture</em></span> written in size 0.2rem font. As the stars finally hide behind the light of the rising sun, you hear one last reverberation, <strong>"<span className="latinSpan">{this.state.latinPhrase4}</span>!"</strong></p>
                   </div>
                   <div className="images">
                     <img src={require("./assets/marioShroom.svg")} alt="A Super Mario-inspired mushroom" className="shroom svgImg animated infinite pulse" />
-                    <img src={pokemonImageArray[this.state.pokeId - 1]} alt="" className="pokeImg svgImg animated infinite flash" />
+                    <img src={pokemonImageArray[this.state.pokeId - 1]} alt={`A Pokémon by the name of ${this.state.pokeTitle}`} className="pokeImg svgImg animated infinite flash"/>
                   
                   </div>
-                  <button onClick={this.resetButton}>Take the Tincture Again</button>
+                  <button tabindex="0" onClick={this.resetButton}>Take the Tincture Again</button>
                 </div>
             
               </section>

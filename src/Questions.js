@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import jump from "jump.js";
+import Swal from 'sweetalert2';
+import withReactContent from 'sweetalert2-react-content';
 
 class SmallDose extends Component{
     constructor() {
@@ -28,7 +30,12 @@ class SmallDose extends Component{
         this.props.getDoseState(this.state.doseChoice);
         this.props.getStoryProp(e, this.state.timeChoice);
         if (this.state.timeChoice === "" || this.state.doseChoice === "") {
-            alert("You need to answer both questions to proceed!");
+            Swal.fire({
+                title: 'Woops!',
+                text: 'Answer both questions to continue',
+                icon: 'error',
+                confirmButtonText: 'Okay'
+            })
         }
         this.resetButton();
     }
