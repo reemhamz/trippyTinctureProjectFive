@@ -252,6 +252,12 @@ button:hover {
   border: 4px solid #29a19c;
 }
 
+@media (max-width: 640px) {
+  button {
+    width: 80%;
+  }
+}
+
 h3 {
   font-family: 'Solway', serif;
   font-size: 4rem;
@@ -260,7 +266,12 @@ h3 {
   font-weight: bolder;
   margin: 0;
   padding: 20px 0;
-  border-bottom: 10px dotted white;
+}
+
+@media (max-width: 430px) {
+  h3 {
+    font-size: 3rem;
+  }
 }
 
 p {
@@ -274,8 +285,39 @@ p {
   }
 }
 
+@media (max-width: 530px) {
+  p {
+    font-size: 1.1rem;
+  }
+}
+
+.App {
+  overflow: hidden;
+}
+
+.storyPage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 120vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 auto;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.storyPage p {
+  background-color: rgba(242, 243, 243, 0.5);
+  border-radius: 20px;
+  margin-bottom: 10px;
+  padding: 0 20px;
+}
+
 .dayDiv {
-  height: 100vh;
   background-image: url(../assets/dayBackground.png);
   background-position: center;
   background-repeat: no-repeat;
@@ -288,19 +330,11 @@ p {
   border: none;
 }
 
-.dayDiv p {
-  background-color: rgba(242, 243, 243, 0.7);
-  border-radius: 20px;
-  margin-bottom: 10px;
-  padding: 0 20px;
-}
-
 .nightDiv {
   background-image: url(../assets/nightBackground.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding-top: 30px;
 }
 
 .nightDiv h3 {
@@ -309,29 +343,14 @@ p {
 }
 
 .nightDiv .nightStory {
-  border-radius: 30px;
-  text-shadow: 0px 0px 50px white;
+  text-shadow: 0px 0px 10px white;
   color: white;
+  background-color: rgba(242, 243, 243, 0.3);
 }
 
 .nightDiv .images {
   -webkit-filter: brightness(50%);
           filter: brightness(50%);
-}
-
-.storyPage {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100vh;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin: 0 auto;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
 }
 
 .images {
@@ -349,46 +368,32 @@ p {
           align-items: flex-end;
 }
 
-.shroom {
+.images .shroom {
   height: 100px;
   width: 100px;
 }
 
 @media (max-width: 875px) {
-  .shroom {
+  .images .shroom {
     height: 50px;
     width: 50px;
   }
 }
 
-.pokeImg {
+.images .pokeImg {
   height: 200px;
   width: 200px;
 }
 
 @media (max-width: 875px) {
-  .pokeImg {
+  .images .pokeImg {
     height: 100px;
     width: 100px;
   }
 }
 
 .latinSpan {
-  display: inline-block;
-  position: relative;
   font-weight: bolder;
-}
-
-.latinSpan::before {
-  content: '';
-  background: green;
-  display: inline-block;
-  height: 8px;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 3px;
-  z-index: -1;
 }
 
 .wrapper {
@@ -399,7 +404,7 @@ p {
 
 @media (max-width: 950px) {
   .wrapper {
-    width: 100%;
+    width: 95%;
   }
 }
 
@@ -424,6 +429,8 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  overflow: hidden;
+  vertical-align: middle;
 }
 
 header .titleScreen {
@@ -461,4 +468,20 @@ header .titleScreen {
     -webkit-box-shadow: none;
             box-shadow: none;
   }
+}
+
+.dayFooter, .nightFooter {
+  padding: 10px;
+  color: white;
+  font-weight: bolder;
+  border-top: 2px solid white;
+}
+
+.dayFooter {
+  background-color: #80AC73;
+}
+
+.nightFooter {
+  background-color: #170E1C;
+  text-shadow: 0px 0px 4px white;
 }

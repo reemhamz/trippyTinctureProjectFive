@@ -1,5 +1,24 @@
+.App{
+    overflow: hidden;
+}
+
+.storyPage{
+    display: flex;
+    height: 120vh;
+    flex-direction: column;
+    margin: 0 auto;
+    justify-content: flex-end;
+    @include mqBigPhone{
+    }
+    p{
+        background-color: rgba(242,243,243,0.5);
+        border-radius: 20px;
+        margin-bottom: 10px;
+        padding: 0 20px;
+    }
+}
+
 .dayDiv{
-    height: 100vh;
     background-image: url(../assets/dayBackground.png);
     background-position: center;
     background-repeat: no-repeat;
@@ -9,12 +28,7 @@
         text-shadow: 2px 2px white;
         border: none;
     }
-    p{
-        background-color: rgba(242,243,243,0.7);
-        border-radius: 20px;
-        margin-bottom: 10px;
-        padding: 0 20px;
-    }
+    
 }
 
 .nightDiv{
@@ -22,27 +36,18 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding-top: 30px;
     h3{
         color: #ffd800;
         text-shadow: 0px 0px 40px #ffd800;
     }
     .nightStory {
-        border-radius: 30px;
-        text-shadow: 0px 0px 50px white;
+        text-shadow: 0px 0px 10px white;
         color: white;
+        background-color: rgba(242,243,243,0.3);
     }
     .images{
         filter:brightness(50%)
     }
-}
-
-.storyPage{
-    display: flex;
-    height: 100vh;
-    flex-direction: column;
-    margin: 0 auto;
-    justify-content: flex-end;
 }
 
 .images{
@@ -50,9 +55,7 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: flex-end;
-}
-
-.shroom {
+    .shroom {
     height: 100px;
     width: 100px;
     @include mqTablet{
@@ -60,8 +63,7 @@
         width: 50px;
     }
 }
-
-.pokeImg {
+    .pokeImg {
     height: 200px;
     width: 200px;
     @include mqTablet{
@@ -69,20 +71,8 @@
         width: 100px;
     }
 }
+}
 
 .latinSpan {
-    display: inline-block;
-    position: relative;
     font-weight: bolder;
-    &::before{
-        content: '';
-        background: green;
-        display: inline-block;
-        height: 8px;
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 3px;
-        z-index: -1;
-    }
 }

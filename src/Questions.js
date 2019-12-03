@@ -29,7 +29,7 @@ class SmallDose extends Component{
         this.props.getDoseState(this.state.doseChoice)
         this.props.getStoryProp(e, this.state.timeChoice)
         if (this.state.timeChoice === "" || this.state.doseChoice === "") {
-            alert("you have to select!")
+            alert("You need to answer both questions to proceed!")
         }
     }
 

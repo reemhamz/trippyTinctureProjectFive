@@ -167,6 +167,7 @@ class App extends Component {
         
       < div className="App" >
           {this.state.timeValue === "day" && this.state.doseValue !== "" ? (
+            <>
             <section className="dayDiv">
               <div className="wrapper storyPage">
                 <h3>The trip under the sun</h3>
@@ -184,10 +185,16 @@ class App extends Component {
                 
                   <button onClick={this.resetButton}>Take the Tincture Again</button>
               </div>
-            </section>
+              </section>
+              <footer className="dayFooter">
+                <p>© Reem Hamoui Juno College 2019</p>
+                
+                </footer>
+              </>
           )
           : null }
-          {this.state.timeValue === "night" && this.state.doseValue !== "" &&(
+          {this.state.timeValue === "night" && this.state.doseValue !== "" && (
+            <>
               <section className="nightDiv">
               <div className="wrapper storyPage">
                 <h3>The nightly trip</h3>
@@ -203,11 +210,15 @@ class App extends Component {
                   </div>
                   <button onClick={this.resetButton}>Take the Tincture Again</button>
                 </div>
-          
+            
               </section>
+              <footer className="nightFooter">
+                <p>© Reem Hamoui Juno College 2019</p>
+                </footer>
+              </>
           )}
           
-        </div >
+        </div>
         </>
     )
   }
