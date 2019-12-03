@@ -47,7 +47,10 @@ button{
     width: 50%;
     margin-top: 40px;
     font-size: 2.5rem;
-    background-color: linear-gradient(to right, #8b2f97 20%, #fe6845 50%, #9d0b0b 100%);
+    background-image: linear-gradient(to right, #84fab0 0%, #8fd3f4 51%, #84fab0 100%);
+      text-transform: uppercase;
+      box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
 }
 
 p{
