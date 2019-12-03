@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Barriecito|Spicy+Rice|McLaren|News+Cycle|Didact+Gothic&display=swap");
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
   display: block;
 }
@@ -183,12 +184,54 @@ html {
   font-size: 62.5%;
 }
 
-p {
-  font-size: 2rem;
+h1 {
+  font-size: 8rem;
+  margin: 0;
+  font-family: 'Spicy Rice', cursive;
+  letter-spacing: 10px;
+  font-weight: lighter;
+  background: -webkit-gradient(linear, left top, right top, color-stop(20%, #8b2f97), color-stop(50%, #fe6845), to(#9d0b0b));
+  background: linear-gradient(to right, #8b2f97 20%, #fe6845 50%, #9d0b0b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
 }
 
-h1 {
-  font-size: 5rem;
+h2, label {
+  font-size: 3rem;
+  font-family: 'Didact Gothic', sans-serif;
+}
+
+h2 {
+  color: #940a37;
+}
+
+label {
+  color: #0c9463;
+  font-weight: bold;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  padding: 10px 0px;
+}
+
+select {
+  font-size: 2.5rem;
+  font-family: 'Didact Gothic', sans-serif;
+  background-color: #ffc6c7;
+  text-align: center;
+}
+
+button {
+  padding: 10px;
+  width: 50%;
+  margin-top: 40px;
+  font-size: 2.5rem;
+  background-color: linear-gradient(to right, #8b2f97 20%, #fe6845 50%, #9d0b0b 100%);
+}
+
+p {
+  font-size: 2rem;
 }
 
 .daySpan {
@@ -214,16 +257,33 @@ img {
   max-width: 100%;
 }
 
-h1 {
-  font-size: 5rem;
-}
-
 header {
   height: 100vh;
   background-image: url(../assets/trippyHeader.gif);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .titleScreen {
+  text-align: center;
+  padding: 30px 20px;
+  width: 55%;
+  background-color: rgba(242, 243, 243, 0.9);
+  border-radius: 30px;
+  -webkit-box-shadow: 10px 7px 6px 8px rgba(255, 224, 18, 0.82);
+          box-shadow: 10px 7px 6px 8px rgba(255, 224, 18, 0.82);
 }
 
 .dayDiv {

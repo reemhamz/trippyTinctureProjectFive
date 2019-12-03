@@ -6,6 +6,7 @@ import Questions from "./Questions";
 import "./App.css";
 import "./styles/styles.css";
 import pokemonImageArray from "./PokemonImages";
+import jump from 'jump.js';
 
 class App extends Component {
   constructor() {
@@ -116,21 +117,14 @@ class App extends Component {
   }
 
   latinFunction = (dose) => {
-    if (dose === "small") {
-      const randomLatinSentence1 = this.state.latinPhrases.splice((Math.floor(Math.random(this.state.latinPhrases) * this.state.latinPhrases.length)), 1)
-      const randomLatinSentence2 = this.state.latinPhrases.splice((Math.floor(Math.random(this.state.latinPhrases) * this.state.latinPhrases.length)), 1)
-      
-    }
-        else if (dose === "medium") {
+        if (dose === "medium") {
           const randomLatinSentence3 = this.state.latinPhrases.splice((Math.floor(Math.random(this.state.latinPhrases) * this.state.latinPhrases.length)), 1)
           this.setState({
             latinPhrase3: randomLatinSentence3
           })
-          
         } else if (dose === "large") {
           const randomLatinSentence3 = this.state.latinPhrases.splice((Math.floor(Math.random(this.state.latinPhrases) * this.state.latinPhrases.length)), 1)
           const randomLatinSentence4 = this.state.latinPhrases.splice((Math.floor(Math.random(this.state.latinPhrases) * this.state.latinPhrases.length)), 1)
-
           this.setState({
             latinPhrase3: randomLatinSentence3,
             latinPhrase4: randomLatinSentence4
@@ -155,17 +149,35 @@ class App extends Component {
     console.log('this is the dose statteetetetete', value)
   }
 
+  resetButton = () => {
+    // jump('.titleScreen', {
+    //   duration: 1500,
+    //   offset: 0,
+    //   callback: undefined,
+    //   a11y: true,
+    // })
+
+    this.setState({
+      timeValue: '',
+      doseValue: '',
+      
+    })
+  }
+
   render() {
     return (
       <>
-      <header>
-        <h1>~Trippy Tincture~</h1>
-        <h3>
+        <header>
+          <div className="titleScreen wrapper">
+          <h1>Trippy Tincture</h1>
+        <h2>
           Your friend, a holistic nutritionist, made you an herbal tincture meant to help reduce your stress levels. You decide to enjoy the clear weather by heading to your favourite park right after having a some drops of the tincture.
-      </h3>
+      </h2>
         
           <Questions getStoryProp={this.getStory} getTimeState={this.getTimeState} getDoseState={this.getDoseState} />
+          </div>
         </header>
+        
         
       < div className="App" >
           {this.state.timeValue === "day" && this.state.doseValue !== "" ? (
@@ -177,6 +189,7 @@ class App extends Component {
                 <img src={pokemonImageArray[this.state.pokeId - 1]} alt="" className="pokeImg svgImg" />
                   <img src={require("./assets/marioShroom.svg")} alt="A Super Mario-inspired mushroom" className="shroom svgImg" />
                   </div>
+                  <button onClick={this.resetButton}>Take the Tincture Again</button>
               </div>
             </section>
           )
@@ -190,8 +203,8 @@ class App extends Component {
                 <img src={pokemonImageArray[this.state.pokeId - 1]} alt="" className="pokeImg svgImg"/>
                   <img src={require("./assets/marioShroom.svg")} alt="A Super Mario-inspired mushroom" className="shroom svgImg" />
                   
-                  <button></button>
                   </div>
+                  <button onClick={this.resetButton}>Take the Tincture Again</button>
                 </div>
           
               </section>

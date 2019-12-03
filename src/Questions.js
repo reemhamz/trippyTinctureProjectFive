@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import jump from 'jump.js';
 
 class SmallDose extends Component{
     constructor() {
@@ -6,7 +7,6 @@ class SmallDose extends Component{
         this.state= {
             timeChoice: '',
             doseChoice: '',
-
         }
 
         console.log('check the props thing', this.prop)
@@ -42,8 +42,18 @@ class SmallDose extends Component{
         this.props.getStoryProp(e, this.state.timeChoice)
         if (this.state.timeChoice === "" || this.state.doseChoice === "") {
             alert('you have to select!')
+
         }
+        // jump('.story')
+        // this.resetButton() 
     }
+
+    // resetButton = () => {
+    //     this.setState({
+    //         timeValue: '',
+    //         doseValue:''
+    //     })  
+    // }
 
     
     render() {
@@ -53,12 +63,12 @@ class SmallDose extends Component{
     <form action="">
         <label htmlFor="timeOfDay">What's the time of day?</label>
         <select name="dayOrNight" id="timeOfDay" onChange={this.weHaveATime}>
-            <option value="">Select time</option>
+            <option value="">Select Time</option>
             <option value="day">Daytime</option>
             <option value="night">Nighttime</option>
         </select>
                     
-        <label htmlFor="amountTaken">How many drops of the tincture did you have?</label>
+        <label htmlFor="amountTaken">How many drops of the tincture will you have?</label>
         <select name="takenSelection" id="amountTaken" onChange={this.weHaveADose}>
             <option value="">Select Amount</option>
             <option value="small">Just a little, I know my limits</option>
